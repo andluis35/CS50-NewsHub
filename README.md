@@ -54,7 +54,7 @@ npm start
 * O servidor estará disponível em: http://localhost:3000
 * Access in the browser: http://localhost:3000
 
-### 1. Rodando sem Backend (página estática) / Running without Backend (static page)
+### 2. Rodando sem Backend (página estática) / Running without Backend (static page)
 * Esse modo usa a hospedagem do GitHub Pages.
 * This mode uses GitHub Pages hosting.
 
