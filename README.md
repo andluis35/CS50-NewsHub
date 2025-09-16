@@ -1,5 +1,5 @@
 # CS50 NewsHub
-Harvard CS50 Final Project
+### Harvard CS50 Final Project
 
 * **CS50 NewsHub** é um portal de notícias desenvolvido como projeto full-stack pessoal inspirado pelo curso **CS50**, com o objetivo de consumir a API pública [NewsData.io](https://newsdata.io/) e exibir as últimas manchetes organizadas por categorias (tecnologia, política, esportes, etc.).  
 
@@ -30,7 +30,7 @@ Harvard CS50 Final Project
 
 ---
 
-## 🚀 Como rodar o projeto / How to Run the Project
+## 🚀 Como rodar o projeto / How to run the project
 
 ### 1. Rodando com Backend (página dinâmica) / Running with Backend (dynamic page) 
 * Esse modo usa o **Node.js + Express** para consumir a API NewsData.io e servir as notícias.
