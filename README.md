@@ -3,7 +3,7 @@ Harvard CS50 Final Project
 
 * **CS50 NewsHub** é um portal de notícias desenvolvido como projeto full-stack pessoal inspirado pelo curso **CS50**, com o objetivo de consumir a API pública [NewsData.io](https://newsdata.io/) e exibir as últimas manchetes organizadas por categorias (tecnologia, política, esportes, etc.).  
 
-* **CS50 NewsHub** is a personal full-stack project that consumes the [NewsData.io](https://newsdata.io/) API to display the latest news from around the world and categorize these news by topics such as technology, politics, sports, and more.
+* **CS50 NewsHub** is a news portal developed as a personal full-stack project inspired by the **CS50** course, aimed at consuming the public [NewsData.io](https://newsdata.io/) API and displaying the latest headlines organized by categories (technology, politics, sports, etc.).
 
 * O foco é oferecer uma interface clara e responsiva, trazendo a experiência de um portal jornalístico, tanto em **modo dinâmico** (com backend em Node.js) quanto em **modo estático** (frontend puro em HTML/CSS/JS).  
 
@@ -49,6 +49,7 @@ echo "NEWS_API_KEY=sua_chave_aqui" > .env
 
 # Rodar o servidor / Start the server
 npm start
+```
 
 * O servidor estará disponível em: http://localhost:3000
 * Access in the browser: http://localhost:3000
