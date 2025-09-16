@@ -60,3 +60,7 @@ npm start
 
 * Acesso disponível em: //link
 * Access available at: //link
+
+## ⏳ Andamento do projeto
+
+* **Trello:** https://trello.com/b/ogYrUh95/cs50-newshub
