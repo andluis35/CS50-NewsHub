@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "* **CS50 NewsHub** é um portal de notícias desenvolvido como projeto full-stack pessoal inspirado pelo curso **CS50**, com o objetivo de consumir a API pública [NewsData.io](https://newsdata.io/) e exibir as últimas manchetes organizadas por categorias (tecnologia, política, esportes, etc.).",
   "main": "app.js",
-  "type":"module",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
