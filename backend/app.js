@@ -2,23 +2,28 @@ import axios from 'axios';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import express from 'express';
+import path from "path";
+import { fileURLToPath } from 'url';
 
 dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 app.use(cors());
 app.use(express.json());
+app.use(express.static(path.join(__dirname, "../frontend")));
 
-app.get('/', (req,res) => {
-    res.send("API rodando!")
-})
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "../frontend/index.html"));
+});
 
 app.get('/news', async (req, res) => {
-    const category = req.query.category || 'top';
-
     try {
+        const category = req.query.category || 'top';
         const response = await axios.get('https://newsdata.io/api/1/latest', {
             params: {
                 apikey: process.env.NEWS_API_KEY,
