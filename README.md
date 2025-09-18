@@ -17,6 +17,7 @@
 - **HTML5**  
 - **CSS3 + Bootstrap**  
 - **JavaScript (ES6+)**
+- **Media Queries**
 
 ### Backend
 - **Node.js**  

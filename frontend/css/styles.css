@@ -1,46 +1,119 @@
 body {
-    display: grid;
-    grid-template-columns: 1fr 6fr;
-    width: 100%;
+    background-color: #FAFAFA;
+}
+
+.sidemenu-title > img {
+    width: 64px;
+    height: 64px;
+}
+
+.footer-links {
+    display: flex;
+}
+
+.sidemenu {
+    position: fixed;
+    top: 0;
+    left: 0;
     height: 100%;
+    width: 256px;
+    padding-top: 20px;
+    background-color: #B71C1C;
+    transition: width 0.3s;
+    border-radius: 0px 8px 8px 0px;
 }
 
-
-header {
-    width: 100%;
-    height: 100%;
-    background-color: red;
+.sidemenu .nav-link, .sidemenu-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    color: #FAFAFA;
+    border-radius: 8px;
 }
 
-main {
-    width: 100%;
-    height: 100%;
-    background-color: blue;
-}
-
-.topics {
-    list-style-type: none;
-}
-
-.category {
-    padding: 12px;
-}
-
-.harvard-shield {
-    width: 50px;
-    height: 50px;
+.nav-link {
+    margin-top: 12px;
 }
 
 .sidemenu-title {
+    background-color: #212121;
+    color: #B71C1C;
+    padding: 24px;
+    width: 100%;
+}
+
+.sidemenu-title p {
+    margin: 0;
+    font-weight: bold;
+    font-size: 24px;
+    font-family: "Montserrat", sans-serif;
+    color: #FAFAFA;
+}
+
+.sidemenu .description {
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+}
+
+.sidemenu .nav-link:hover {
+    background-color: #212121;
+}
+
+.icon {
+    color: #b8b8b8;
+}
+
+.credits .nav-link {
     display: flex;
-    justify-content: center;
+}
+
+.credits {
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    color: #a1a1a1;
 }
 
-.sidemenu-title > h1 {
-    font-size: 32px;
+.credits .icon {
+    color: #FAFAFA;
 }
 
-.social-media-images {
-    display: flex;
+.sidemenu .nav-link:active {
+    background-color: #000000;
+}
+
+.main-content {
+    height: 100%;
+    margin-left: 256px;
+    padding: 20px;
+}
+
+
+@media (max-width: 480px) {
+    .sidemenu, .sidemenu-title, .credits {
+        width: 60px;
+    }
+    
+    .sidemenu-title, .footer-links {
+        flex-direction: column;
+    }
+
+    .sidemenu .description, .sidemenu-title p, .credits p {
+        display: none;
+    }
+
+    .sidemenu-title img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .footer-links .nav-link{
+        padding: 5px 10px;
+        margin-top: 0;
+    }
+    
+    .main-content {
+        margin-left: 60px;
+    }
 }
