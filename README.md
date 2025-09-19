@@ -45,7 +45,7 @@ cd cs50-newshub/backend
 # Instalar dependências / Install dependencies
 npm install
 
-# Criar arquivo .env e adicionar sua chave da NewsData.io / Create a .env file inside the backend/ folder and add your NewsData.io API key:
+# Criar arquivo .env dentro da pasta backend/ e adicionar sua chave API da NewsData.io / Create a .env file inside the backend/ folder and add your NewsData.io API key:
 echo "NEWS_API_KEY=sua_chave_aqui" > .env
 
 # Rodar o servidor / Start the server

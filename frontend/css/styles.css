@@ -86,7 +86,7 @@ body {
 .main-content {
     height: 100%;
     margin-left: 256px;
-    padding: 20px;
+    padding: 0px 20px 20px 20px;
 }
 
 .card {
