@@ -2,9 +2,15 @@ body {
     background-color: #FAFAFA;
 }
 
-.sidemenu-title > img {
+.sidemenu-title img {
     width: 64px;
     height: 64px;
+    margin-right: 5px;
+}
+
+.sidemenu-title img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
 }
 
 .footer-links {
@@ -34,6 +40,8 @@ body {
 
 .nav-link {
     margin-top: 12px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
 }
 
 .sidemenu-title {
@@ -57,7 +65,10 @@ body {
 }
 
 .sidemenu .nav-link:hover {
-    background-color: #212121;
+    border: 1px solid #FAFAFA;
+    transition: background-color 0.3s ease;
+    transform: translateY(-5px);
+    font-weight: bolder;
 }
 
 .icon {
