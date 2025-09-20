@@ -57,7 +57,7 @@ function renderNews(articles) {
     newsContainer.innerHTML = "";
 
     articles.forEach(article => {
-        const imageUrl = article.image_url ? article.image_url : "./assets/images/fallback-news.png";
+        const imageUrl = article.image_url ? article.image_url : "./assets/images/fallback_news.png";
         const col = document.createElement("div");
         col.className = "col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4";
 
