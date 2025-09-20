@@ -88,6 +88,27 @@ async function fetchNews(category='top') {
     }
 }
 
+async function loadBreakingNews() {
+  try {
+    const response = await fetch("./mock-news.json");
+    const news = await response.json();
+
+    if (news.results && news.results.length > 0) {
+      const headlines = news.results
+                        .slice(0, 5)
+                        .map(article => article.title)
+                        .join(' 📰 ');
+                        
+
+      document.getElementById("ticker-content").textContent = headlines;
+    }
+
+  }
+  catch (err) {
+    console.error("Failed to load breaking news:", err);
+  }
+}
+
 categoryNavLinks.forEach(button => {
   button.addEventListener('click', () => {
     const category = button.dataset.category;
@@ -96,5 +117,6 @@ categoryNavLinks.forEach(button => {
   })
 })
 
-fetchNews('top');
-//renderNews(mockArticles);
+loadBreakingNews();
+//fetchNews('top');
+renderNews(mockArticles);
