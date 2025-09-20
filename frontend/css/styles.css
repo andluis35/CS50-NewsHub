@@ -40,7 +40,6 @@ body {
 
 .nav-link {
     margin-top: 12px;
-    border: 1px solid transparent;
     transition: all 0.3s ease;
 }
 
@@ -65,7 +64,8 @@ body {
 }
 
 .sidemenu .nav-link:hover {
-    border: 1px solid #FAFAFA;
+    background-color: #FAFAFA;
+    color: #B71C1C;
     transition: background-color 0.3s ease;
     transform: translateY(-5px);
     font-weight: bolder;
@@ -88,6 +88,10 @@ body {
 
 .credits .icon {
     color: #FAFAFA;
+}
+
+.credits .nav-link:hover {
+    background-color: #212121;
 }
 
 .sidemenu .nav-link:active {
