@@ -1,4 +1,6 @@
-const newsContainer = document.getElementById('news-container')
+const newsContainer = document.getElementById('news-container');
+const categoryNavLinks = document.querySelectorAll('.nav-link');
+console.log(categoryNavLinks);
 
 const mockArticles = [
   {
@@ -86,5 +88,13 @@ async function fetchNews(category='top') {
     }
 }
 
-//fetchNews();
-renderNews(mockArticles);
+categoryNavLinks.forEach(button => {
+  button.addEventListener('click', () => {
+    const category = button.dataset.category;
+    console.log(category)
+    fetchNews(category);
+  })
+})
+
+fetchNews('top');
+//renderNews(mockArticles);
