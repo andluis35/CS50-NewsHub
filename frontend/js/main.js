@@ -57,12 +57,13 @@ function renderNews(articles) {
     newsContainer.innerHTML = "";
 
     articles.forEach(article => {
+        const imageUrl = article.image_url ? article.image_url : "./assets/images/fallback-news.png";
         const col = document.createElement("div");
         col.className = "col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4";
 
         col.innerHTML = `
             <div class="card h-100 shadow-sm">
-                <img alt="News image" class="card-img-top" src="${article.image_url}" />
+                <img alt="News image" class="card-img-top" src="${imageUrl}" />
                 <div class="card-body d-flex flex-column">
                     <h5 class="card-title">${article.title}</h5>
                     <p class="card-text">${article.description || ''}</p>
