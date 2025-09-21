@@ -151,14 +151,8 @@ body {
     align-items: center;
     overflow: hidden;
     margin-left: 256px;
-    border-bottom: 16px solid #FAFAFA;
     border-radius: 8px;
-    margin: 0 40px 0 276px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 9999;
-    width: 100%;
+    margin: 0 20px 0 276px;
 }
 
 .breaking-title {
@@ -180,10 +174,6 @@ body {
 
 #ticker-content {
     white-space: pre;
-}
-
-#news-container {
-    margin-top: 70px;
 }
 
 @keyframes ticker {
