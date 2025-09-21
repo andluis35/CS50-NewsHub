@@ -109,7 +109,7 @@ body {
     max-height: 400px;
     overflow: auto;
     border-radius: 8px;
-    border: 2px double #B71C1C;
+    border: 8px outset #B71C1C;
     box-shadow: inset 0 0 0 3px #fff, 0 0 0 1px #000;
     margin-top: 12px;
     font-family: "Montserrat", sans-serif;
