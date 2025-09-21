@@ -55,6 +55,15 @@ const mockArticles = [
 function renderNews(articles) {
     newsContainer.innerHTML = "";
 
+    if (!articles || articles.length == 0) {
+      newsContainer.innerHTML = `
+        <div class="alert alert-warning text-center" role="alert">
+          No news found.
+        </div>
+      `;
+      return;
+    }
+
     articles.forEach(article => {
         const imageUrl = article.image_url ? article.image_url : "./assets/images/fallback_news.png";
         const col = document.createElement("div");
@@ -69,7 +78,7 @@ function renderNews(articles) {
                     <a class="btn btn-secondary mt-auto" href="${article.link}" target="_blank">Read More</a>
                 </div>
             </div>
-        `
+        `;
         newsContainer.appendChild(col);
     })
     
@@ -81,10 +90,20 @@ async function fetchNews(category='top') {
         const data = await response.json();
         const articles = data.results || [];
 
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
         renderNews(articles)
     }
     catch (err) {
         console.error("Failed to fetch news:", err);
+
+        newsContainer.innerHTML = `
+          <div class="alert alert-danger text-center role="alert">
+            Occurred an error to fetch news. Try again later.
+          </div>
+        `;
     }
 }
 
