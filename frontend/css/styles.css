@@ -172,6 +172,10 @@ body {
     animation: ticker 20s linear infinite;
 }
 
+#ticker-content {
+    white-space: pre;
+}
+
 @keyframes ticker {
     0% { transform: translateX(0); }
     100% { transform: translateX(-100%); }

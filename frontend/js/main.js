@@ -1,6 +1,5 @@
 const newsContainer = document.getElementById('news-container');
 const categoryNavLinks = document.querySelectorAll('.nav-link');
-console.log(categoryNavLinks);
 
 const mockArticles = [
   {
@@ -98,7 +97,7 @@ async function loadBreakingNews() {
       const headlines = news.results
                         .slice(0, 5)
                         .map(article => article.title)
-                        .join(' 📰 ');
+                        .join('     ■     ');
                         
 
       document.getElementById("ticker-content").textContent = headlines;
