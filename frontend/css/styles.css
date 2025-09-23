@@ -188,7 +188,7 @@ hr {
 }
 
 #news-container {
-    margin-top: 70px;
+    margin-top: 24px;
 }
 
 @keyframes ticker {
@@ -206,7 +206,7 @@ hr {
         border-radius: 0 0 8px 8px;
     }
     .main-content {
-        margin-top: 100px;
+        margin-top: 64px;
         margin-left: 0;
     }
     .navbar-brand {
@@ -249,5 +249,9 @@ hr {
     }
     .credits {
         flex-direction: row;
+    }
+    .navbar-custom p {
+        color: #a1a1a1;
+        text-align: center;
     }
 }
