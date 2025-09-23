@@ -165,9 +165,9 @@ hr {
     align-items: center;
     overflow: hidden;
     margin-left: 256px;
-    border-radius: 8px;
+    border-radius: 8px 0 0 8px;
     border-bottom: 8px solid #a1a1a1;
-    margin: 0 20px 0 276px;
+    margin: 0 0 0 270px;
     position: relative;
     top: 0;
     left: 0;
