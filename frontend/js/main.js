@@ -54,10 +54,12 @@ const mockArticles = [
 
 function showSpinner() {
   document.getElementById("loading-spinner").classList.remove("d-none");
+  newsContainer.style.display = 'none';
 }
 
 function hideSpinner() {
   document.getElementById("loading-spinner").classList.add("d-none");
+  newsContainer.style.display = 'flex';
 }
 
 function renderNews(articles) {
@@ -148,5 +150,5 @@ categoryNavLinks.forEach(button => {
 })
 
 loadBreakingNews();
-fetchNews('top');
-//renderNews(mockArticles);
+//fetchNews('top');
+renderNews(mockArticles);
