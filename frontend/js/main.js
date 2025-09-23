@@ -88,7 +88,7 @@ async function fetchNews(category='top') {
     try {
         const response = await fetch(`/news?category=${category}`);
         const data = await response.json();
-        const articles = data.results || [];
+        const articles = (data.results || []).slice(0,8);
 
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
@@ -137,5 +137,5 @@ categoryNavLinks.forEach(button => {
 })
 
 loadBreakingNews();
-//fetchNews('top');
-renderNews(mockArticles);
+fetchNews('top');
+//renderNews(mockArticles);
