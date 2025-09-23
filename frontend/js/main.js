@@ -1,5 +1,5 @@
 const newsContainer = document.getElementById('news-container');
-const categoryNavLinks = document.querySelectorAll('.nav-link');
+const categoryNavLinks = document.querySelectorAll('.nav-link[data-category]');
 
 const mockArticles = [
   {
@@ -145,9 +145,14 @@ async function loadBreakingNews() {
 categoryNavLinks.forEach(button => {
   button.addEventListener('click', () => {
     const category = button.dataset.category;
+    
+    categoryNavLinks.forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
+
     fetchNews(category);
   })
 })
+document.querySelector('.nav-link[data-category="top"]').classList.add('active');
 
 loadBreakingNews();
 //fetchNews('top');

@@ -102,7 +102,7 @@ hr {
     background-color: #212121;
 }
 
-.sidemenu .nav-link:active {
+.sidemenu .nav-link.active {
     background-color: #000000;
 }
 
@@ -235,6 +235,7 @@ hr {
     .navbar-custom .nav-link:hover {
         background-color: #FAFAFA;
         color: #B71C1C;
+        font-weight: bolder;
     }
     .navbar-custom .nav-link:active {
         background-color: #000;
@@ -261,5 +262,9 @@ hr {
     .navbar-custom p {
         color: #a1a1a1;
         text-align: center;
+    }
+    .navbar-custom .nav-link.active {
+        background-color: #B71C1C;
+        color: #FAFAFA;
     }
 }
