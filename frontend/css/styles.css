@@ -189,6 +189,12 @@ hr {
     white-space: pre;
 }
 
+#loading-spinner {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
 #news-container {
     margin-top: 24px;
 }

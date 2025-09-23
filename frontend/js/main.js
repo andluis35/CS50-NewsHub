@@ -52,6 +52,14 @@ const mockArticles = [
   }
 ];
 
+function showSpinner() {
+  document.getElementById("loading-spinner").classList.remove("d-none");
+}
+
+function hideSpinner() {
+  document.getElementById("loading-spinner").classList.add("d-none");
+}
+
 function renderNews(articles) {
     newsContainer.innerHTML = "";
 
@@ -85,6 +93,7 @@ function renderNews(articles) {
 }
 
 async function fetchNews(category='top') {
+    showSpinner();
     try {
         const response = await fetch(`/news?category=${category}`);
         const data = await response.json();
@@ -104,6 +113,9 @@ async function fetchNews(category='top') {
             Occurred an error to fetch news. Try again later.
           </div>
         `;
+    }
+    finally {
+      hideSpinner();
     }
 }
 
@@ -136,5 +148,5 @@ categoryNavLinks.forEach(button => {
 })
 
 loadBreakingNews();
-//fetchNews('top');
-renderNews(mockArticles);
+fetchNews('top');
+//renderNews(mockArticles);
