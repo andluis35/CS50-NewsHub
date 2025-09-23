@@ -14,10 +14,11 @@
     </head>
 
     <body>
-       <div class="sidemenu">
+        <!-- SIDEMENU DESKTOP -->
+       <aside class="sidemenu">
             <nav class="nav flex-column">
                 <div class="sidemenu-title">
-                    <a href="https://www.harvard.edu/" target="_blank"><img src="./assets/images/harvard_shield.png" alt="Harvard University shield"></a>
+                    <a href="https://www.harvard.edu/" target="_blank"><img id="harvard-shield" src="./assets/images/harvard_shield.png" alt="Harvard University shield"></a>
                     <p>CS50 NewsHub</p>
                 </div>
 
@@ -119,9 +120,122 @@
                     <p>by Anderson Luis</p>
                 </div>
             </nav> 
-       </div>
+        </aside>
 
+        <!-- NAVBAR MOBILE -->
+       <nav class="navbar navbar-custom navbar-expand-md d-block d-md-none">
+            <div class="container-fluid">
+                <a href="https://www.harvard.edu/" target="_blank"><img id="harvard-shield" src="./assets/images/harvard_shield.png" alt="Harvard University shield"></a>
+                <a class="navbar-brand" href="#">CS50 NewsHub</a>
+                <button aria-controls="mobileMenu" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#mobileMenu" data-bs-toggle="collapse" type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
+                <div class="collapse navbar-collapse" id="mobileMenu">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"> 
+                            <a class="nav-link" data-category="top" href="#">
+                                <span class="icon">
+                                    <i class="bi bi-arrow-up-circle"></i>
+                                </span>
+                                <span class="description">Top</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item"> 
+                            <a class="nav-link" data-category="world" href="#">
+                                <span class="icon">
+                                    <i class="bi bi-globe-americas"></i>
+                                </span>
+                                <span class="description">World</span>
+                            </a> 
+                        </li>
+
+                        <li class="nav-item"> 
+                            <a class="nav-link" data-category="business" href="#">
+                                <span class="icon">
+                                    <i class="bi bi-suitcase-lg"></i>
+                                </span>
+                                <span class="description">Business</span>
+                            </a> 
+                        </li>
+
+                        <li class="nav-item"> 
+                            <a class="nav-link" data-category="entertainment" href="#">
+                                <span class="icon">
+                                    <i class="bi bi-emoji-laughing"></i>
+                                </span>
+                                <span class="description">Entertainment</span>
+                            </a> 
+                        </li>
+
+                        <li class="nav-item"> 
+                            <a class="nav-link" data-category="food" href="#">
+                                <span class="icon">
+                                    <i class="bi bi-cup-straw"></i>
+                                </span>
+                                <span class="description">Food</span>
+                            </a> 
+                        </li>
+
+                        <li class="nav-item"> 
+                            <a class="nav-link" data-category="health" href="#">
+                                <span class="icon">
+                                    <i class="bi bi-heart-pulse"></i>
+                                </span>
+                                <span class="description">Health</span>
+                            </a> 
+                        </li>
+
+                        <li class="nav-item"> 
+                            <a class="nav-link" data-category="politics" href="#">
+                                 <span class="icon">
+                                    <i class="bi bi-bank"></i>
+                                </span>
+                                <span class="description">Politics</span>
+                            </a> 
+                        </li>
+
+                        <li class="nav-item"> 
+                            <a class="nav-link" data-category="science" href="#">
+                                <span class="icon">
+                                    <i class="bi bi-beaker"></i>
+                                </span>
+                                <span class="description">Science</span>
+                            </a> 
+                        </li>
+
+                        <li class="nav-item"> 
+                            <a class="nav-link" data-category="sports" href="#">
+                                <span class="icon">
+                                    <i class="bi bi-trophy"></i>
+                                </span>
+                                <span class="description">Sports</span>
+                            </a> 
+                        </li>
+
+                        <li class="nav-item"> 
+                            <a class="nav-link" data-category="technology" href="#">
+                                <span class="icon">
+                                    <i class="bi bi-cpu"></i>
+                                </span>
+                                <span class="description">Technology</span>
+                            </a> 
+                        </li>
+                    </ul>
+
+                    <hr />
+
+                    <ul class="navbar-nav credits">
+                        <li class="nav-item social-media"><a class="nav-link" href="https://www.linkedin.com/in/anderson-luis-663970325/" target="_blank"><i class="bi bi-linkedin fs-4"></i></a></li>
+                        <li class="nav-item social-media"><a class="nav-link" href="https://github.com/andluis35" target="_blank"><i class="bi bi-github fs-4"></i></a></li>
+                        <li class="nav-item social-media"><a class="nav-link" href="https://www.instagram.com/_and.oliver_/" target="_blank"><i class="bi bi-instagram fs-4"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+       </nav>
+
+       <!-- BREAKING NEWS SECTION -->
        <div class="breaking-news">
             <span class="breaking-title">BREAKING:</span>
             <div class="ticker">

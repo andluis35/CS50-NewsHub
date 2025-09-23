@@ -1,8 +1,13 @@
 body {
     background-color: #FAFAFA;
+    min-width: 375px;
 }
 
-.sidemenu-title img {
+hr {
+    color: #575757;
+}
+
+#harvard-shield {
     width: 64px;
     height: 64px;
     margin-right: 5px;
@@ -155,7 +160,7 @@ body {
     border-radius: 8px;
     border-bottom: 8px solid #a1a1a1;
     margin: 0 20px 0 276px;
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     z-index: 9999;
@@ -191,34 +196,58 @@ body {
     100% { transform: translateX(-100%); }
 }
 
-@media (max-width: 480px) {
-    .sidemenu, .sidemenu-title, .credits {
-        width: 60px;
-    }
-    
-    .sidemenu-title, .footer-links {
-        flex-direction: column;
-    }
-
-    .sidemenu .description, .sidemenu-title p, .credits p {
+@media (max-width: 767px) {
+    .sidemenu {
         display: none;
     }
-
-    .sidemenu-title img {
-        width: 48px;
-        height: 48px;
-    }
-
-    .footer-links .nav-link{
-        padding: 5px 10px;
-        margin-top: 0;
-    }
-    
-    .main-content {
-        margin-left: 60px;
-    }
-
     .breaking-news {
-        margin: 0 20px 0 80px;
+        margin-left: 0;
+        margin-right: 0;
+        border-radius: 0 0 8px 8px;
+    }
+    .main-content {
+        margin-top: 100px;
+        margin-left: 0;
+    }
+    .navbar-brand {
+        font-family: "Montserrat", sans-serif;
+        font-weight: bolder;
+        color: #FAFAFA;
+    }
+    .navbar-custom {
+        padding: 20px;
+        background-color: #212121;
+    }
+    .navbar-custom .nav-link {
+        color: #FAFAFA;
+        padding: 16px;
+        border-radius: 8px;
+        font-family: "Montserrat", sans-serif;
+    }
+    .navbar-custom .nav-link:hover {
+        background-color: #FAFAFA;
+        color: #B71C1C;
+    }
+    .navbar-custom .nav-link:active {
+        background-color: #000;
+        font-weight: bolder;
+    }
+    .navbar-custom .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23FAFAFA' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+    .navbar-custom .navbar-toggler {
+        border: 0;
+        background-color: #B71C1C;
+    }
+    .navbar-custom .navbar-toggler:active {
+        border: 1px solid #FAFAFA;
+    }
+    .navbar-custom .navbar-nav {
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+    }
+    .credits {
+        flex-direction: row;
     }
 }

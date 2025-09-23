@@ -131,11 +131,10 @@ async function loadBreakingNews() {
 categoryNavLinks.forEach(button => {
   button.addEventListener('click', () => {
     const category = button.dataset.category;
-    console.log(category)
     fetchNews(category);
   })
 })
 
 loadBreakingNews();
-fetchNews('top');
-//renderNews(mockArticles);
+//fetchNews('top');
+renderNews(mockArticles);
