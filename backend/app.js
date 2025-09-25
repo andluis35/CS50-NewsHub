@@ -31,7 +31,18 @@ app.get('/news', async (req, res) => {
                 language: 'en'
             }
         });
-        res.json(response.data);
+
+        const articles = (response.data.results || []).map(a => ({
+            title: a.title || 'No title',
+            description: a.description || '',
+            link: a.link || '#',
+            image_url: a.image_url || './assets/images/fallback_news.png'
+        }));
+
+        if (articles.length === 0) {
+            return res.json({ results: [] });
+        }
+        res.json({ results: articles });
     }
     catch (error) {
         console.error(error.message);
