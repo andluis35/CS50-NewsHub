@@ -1,5 +1,4 @@
 import axios from 'axios';
-import cors from 'cors';
 import dotenv from 'dotenv';
 import express from 'express';
 import path from "path";
@@ -9,11 +8,9 @@ dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "../frontend")));
 
