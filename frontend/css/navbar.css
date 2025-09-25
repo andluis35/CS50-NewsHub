@@ -38,7 +38,7 @@
         text-align: center;
         width: 100%;
     }
-    .credits {
+    .credits .navbar-nav {
         flex-direction: row;
     }
     .navbar-custom p {

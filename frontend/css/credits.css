@@ -21,6 +21,10 @@
     background-color: #212121;
 }
 
+.credits .nav-link:active {
+    background-color: #000;
+}
+
 .footer-links {
     display: flex;
 }
