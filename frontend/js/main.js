@@ -1,69 +1,18 @@
 const newsContainer = document.getElementById('news-container');
 const categoryNavLinks = document.querySelectorAll('.nav-link[data-category]');
 
-const mockArticles = [
-  {
-    title: "Notícia 1 de teste",
-    description: "Descrição curta da notícia 1.",
-    link: "https://example.com/noticia1",
-    image_url: "https://via.placeholder.com/600x300"
-  },
-  {
-    title: "Notícia 2 de teste",
-    description: "Descrição curta da notícia 2.",
-    link: "https://example.com/noticia2",
-    image_url: "https://via.placeholder.com/600x300"
-  },
-  {
-    title: "Notícia 3 de teste",
-    description: "Descrição curta da notícia 3.",
-    link: "https://example.com/noticia3",
-    image_url: "https://via.placeholder.com/600x300"
-  },
-  {
-    title: "Notícia 4 de teste",
-    description: "Descrição curta da notícia 3.",
-    link: "https://example.com/noticia3",
-    image_url: "https://via.placeholder.com/600x300"
-  },
-  {
-    title: "Notícia 5 de teste",
-    description: "Descrição curta da notícia 3.",
-    link: "https://example.com/noticia3",
-    image_url: "https://via.placeholder.com/600x300"
-  },
-  {
-    title: "Notícia 6 de teste",
-    description: "Descrição curta da notícia 3.",
-    link: "https://example.com/noticia3",
-    image_url: "https://via.placeholder.com/600x300"
-  },
-  {
-    title: "Notícia 7 de teste",
-    description: "Descrição curta da notícia 3.",
-    link: "https://example.com/noticia3",
-    image_url: "https://via.placeholder.com/600x300"
-  },
-  {
-    title: "Notícia 8 de teste",
-    description: "Descrição curta da notícia 3.",
-    link: "https://example.com/noticia3",
-    image_url: "https://via.placeholder.com/600x300"
-  }
-];
-
 function showSpinner() {
-  document.getElementById("loading-spinner").classList.remove("d-none");
+  document.getElementById('loading-spinner').classList.remove('d-none');
   newsContainer.style.display = 'none';
 }
 
 function hideSpinner() {
-  document.getElementById("loading-spinner").classList.add("d-none");
+  document.getElementById('loading-spinner').classList.add('d-none');
   newsContainer.style.display = 'flex';
 }
 
 function renderNews(articles) {
-    newsContainer.innerHTML = "";
+    newsContainer.innerHTML = '';
 
     if (!articles || articles.length == 0) {
       newsContainer.innerHTML = `
@@ -75,9 +24,9 @@ function renderNews(articles) {
     }
 
     articles.forEach(article => {
-        const imageUrl = article.image_url ? article.image_url : "./assets/images/fallback_news.png";
-        const col = document.createElement("div");
-        col.className = "col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4";
+        const imageUrl = article.image_url ? article.image_url : './assets/images/fallback_news.png';
+        const col = document.createElement('div');
+        col.className = 'col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4';
 
         col.innerHTML = `
             <div class="card h-100 shadow-sm">
@@ -108,7 +57,7 @@ async function fetchNews(category='top') {
         renderNews(articles)
     }
     catch (err) {
-        console.error("Failed to fetch news:", err);
+        console.error('Failed to fetch news:', err);
 
         newsContainer.innerHTML = `
           <div class="alert alert-danger text-center role="alert">
@@ -123,22 +72,22 @@ async function fetchNews(category='top') {
 
 async function loadBreakingNews() {
   try {
-    const response = await fetch("./mock-news.json");
+    const response = await fetch('/news?category=world');
     const news = await response.json();
 
     if (news.results && news.results.length > 0) {
       const headlines = news.results
-                        .slice(0, 5)
+                        .slice(0, 8)
                         .map(article => article.title)
                         .join('     ■     ');
                         
 
-      document.getElementById("ticker-content").textContent = headlines;
+      document.getElementById('ticker-content').textContent = headlines;
     }
 
   }
   catch (err) {
-    console.error("Failed to load breaking news:", err);
+    console.error('Failed to load breaking news:', err);
   }
 }
 
@@ -155,5 +104,4 @@ categoryNavLinks.forEach(button => {
 document.querySelector('.nav-link[data-category="top"]').classList.add('active');
 
 loadBreakingNews();
-//fetchNews('top');
-renderNews(mockArticles);
+fetchNews('top');
