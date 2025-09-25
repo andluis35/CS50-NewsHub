@@ -1,0 +1,72 @@
+.sidemenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 256px;
+    padding-top: 20px;
+    background-color: #B71C1C;
+    transition: width 0.3s;
+    border-radius: 0px 8px 8px 0px;
+    border-right: 8px solid #a1a1a1;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+.sidemenu-title img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.sidemenu .nav-link, .sidemenu-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    color: #FAFAFA;
+    border-radius: 8px;
+}
+
+.sidemenu-title {
+    background-color: #212121;
+    color: #B71C1C;
+    padding: 24px;
+    width: 100%;
+}
+
+.sidemenu-title p {
+    margin: 0;
+    font-weight: bold;
+    font-size: 24px;
+    font-family: "Montserrat", sans-serif;
+    color: #FAFAFA;
+}
+
+.sidemenu .description {
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+}
+
+.sidemenu .nav-link:hover {
+    background-color: #FAFAFA;
+    color: #B71C1C;
+    transition: background-color 0.3s ease;
+    transform: translateY(-5px);
+    font-weight: bolder;
+}
+
+.sidemenu .nav-link:active {
+    background-color: #212121;
+}
+
+.sidemenu .nav-link.active {
+    background-color: #FAFAFA;
+    color: #B71C1C;
+    font-weight: bolder;
+}
+
+@media (max-width: 767px) {
+    .sidemenu {
+        display: none;
+    }
+}

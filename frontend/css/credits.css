@@ -1,0 +1,26 @@
+.credits {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #a1a1a1;
+}
+
+.icon {
+    color: #b8b8b8;
+}
+
+.credits .nav-link {
+    display: flex;
+}
+
+.credits .icon {
+    color: #FAFAFA;
+}
+
+.credits .nav-link:hover {
+    background-color: #212121;
+}
+
+.footer-links {
+    display: flex;
+}

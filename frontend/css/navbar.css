@@ -1,0 +1,52 @@
+@media (max-width: 767px) {
+    .navbar-brand {
+        font-family: "Montserrat", sans-serif;
+        font-weight: bolder;
+        color: #FAFAFA;
+    }
+    .navbar-custom {
+        padding: 20px;
+        background-color: #212121;
+    }
+    .navbar-custom .nav-link {
+        color: #FAFAFA;
+        padding: 16px;
+        border-radius: 8px;
+        font-family: "Montserrat", sans-serif;
+    }
+    .navbar-custom .nav-link:hover {
+        background-color: #FAFAFA;
+        color: #B71C1C;
+        font-weight: bolder;
+    }
+    .navbar-custom .nav-link:active {
+        background-color: #000;
+        font-weight: bolder;
+    }
+    .navbar-custom .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23FAFAFA' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+    .navbar-custom .navbar-toggler {
+        border: 0;
+        background-color: #B71C1C;
+    }
+    .navbar-custom .navbar-toggler:active {
+        border: 1px solid #FAFAFA;
+    }
+    .navbar-custom .navbar-nav {
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+    }
+    .credits {
+        flex-direction: row;
+    }
+    .navbar-custom p {
+        color: #a1a1a1;
+        text-align: center;
+    }
+    .navbar-custom .nav-link.active {
+        background-color: #B71C1C;
+        color: #FAFAFA;
+    }
+}
