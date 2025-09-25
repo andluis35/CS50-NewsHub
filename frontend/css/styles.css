@@ -127,6 +127,8 @@ hr {
     margin-top: 12px;
     font-family: "Montserrat", sans-serif;
     transition: all 0.3s ease;
+    position: relative;
+    z-index: 0;
 }
 
 .card-img-top {
@@ -203,6 +205,10 @@ hr {
 
 #news-container {
     margin-top: 24px;
+}
+
+.btn {
+    background-color: #B71C1C;
 }
 
 @keyframes ticker {
