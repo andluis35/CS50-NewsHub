@@ -46,7 +46,7 @@ function renderNews(articles) {
 async function fetchNews(category='top') {
     showSpinner();
     try {
-        const response = await fetch(`https://meu-backend.onrender.com/news?category=${category}`);
+        const response = await fetch(`https://cs50-newshub-backend.onrender.com/news?category=${category}`);
         const data = await response.json();
         const articles = (data.results || []).slice(0,8);
 
@@ -72,7 +72,7 @@ async function fetchNews(category='top') {
 
 async function loadBreakingNews() {
   try {
-    const response = await fetch('https://meu-backend.onrender.com/news?category=world');
+    const response = await fetch('https://cs50-newshub-backend.onrender.com/news?category=world');
     const news = await response.json();
 
     if (news.results && news.results.length > 0) {
