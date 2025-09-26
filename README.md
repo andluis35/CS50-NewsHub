@@ -73,7 +73,7 @@ cs50-newshub/
 
 * **Carregamento dinâmico com spinner / Dynamic loading spinner:** Feedback visual enquanto notícias são carregadas. Visual feedback while news are loading.
 
-* **Ticker de notícias / Breaking News)**: Um feed contínuo de manchetes destacadas é exibido no topo da página. A continuous feed of highlighted headlines is displayed at the top of the page.
+* **Ticker de notícias / Breaking News**: Um feed contínuo de manchetes destacadas é exibido no topo da página. A continuous feed of highlighted headlines is displayed at the top of the page.
 
 * **Fallback de imagens / Images fallback:** Caso a notícia não tenha imagem, uma imagem padrão é exibida. If the new has no image, a default image is displayed
 
